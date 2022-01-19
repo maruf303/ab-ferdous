@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #3B577B;
+    border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #4d71a0;
+}
+::-webkit-scrollbar-track{
+    background-color: gray;
+}
+header { 
+    height: 100vh;
+    background: #FEFEFE;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0% 5%;
+    height: 10vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+/* nav .logo a {
+    text-decoration: none;
+    color: #3B577B;
+    font-size: 35px;
+    font-weight: 700;
+}
+nav .logo a span{
+    color: #3b577b68;
+} */
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px;
+}
+nav .logo img{
+    width: 260px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    user-select: none;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #3B577B;
+    font-weight: 600;
+    font-size: 20px;
+    z-index: 1111;
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    margin: auto;
+    display: block;
+    background-color: #3B577B;
+    height: 3px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.content{
+    height: calc(100vh - 300px);
+    display: flex;
+    padding: 0% 5%;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.content .text h1{ 
+    color: #3B577B;
+    font-weight: 600;
+    font-size: 60px;
+}
+.content .text p{
+    line-height: 1.8rem;
+    color: #3B577B;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    background-color: #3B577B;
+    padding: 16px 30px;
+    border-radius: 40px;
+    width: fit-content;
+    display: block;
+    margin: 15px 0;
+    border: 3px solid #3B577B;
+    font-weight: 500;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 0.5s 0s;
+}
+ .button a:hover{
+    background-color: transparent;
+    box-shadow: none;
+    color: #3B577B;
+} 
+
+.hero-img img{
+    position: absolute;
+    height: 670px;
+    width: 670px;
+    left: 50%;
+    bottom: -0%;
+    user-select: none;
+    filter: drop-shadow(0px 0px 30px #3B577B);
+    animation: baten 2s linear;
+    z-index: 11;
+    transform-origin: bottom;
+}
+@keyframes baten{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.0);
+    }
+}
+
+
+.far{
+    transform-origin: bottom;
+    font-size: 100px;
+    position: absolute;
+    color: #7fb3d5;
+    left: 70%;
+    top: 600px;
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: 1;
+
+}
+.hero-img:hover .far{   
+      transform: scale(7.30);
+}
+
+
+/* about section create css */
+
+.container{
+    padding: 0 120px;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+}
+.container h1{
+    font-weight: 700;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3B577B;
+    display: grid;
+    justify-content: center;
+}
+.container h1::after{
+    content: "";
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: 6px;
+    border-radius: 6px;
+    background-color: rgb(59, 87, 123);
+}
+.container img{
+    box-shadow: rgba(59, 87, 123, 0.25) 0px 14px 28px, rgba(59, 87, 123, 0.22) 0px 10px 10px;
+    border-radius: 50%;
+    user-select: none;
+    filter: drop-shadow(0px 0px 20px #3B577B);
+    width: 450px;
+    height: 450px;
+}
+.container .main-content{
+    display: flex;
+    justify-content: space-between;
+}
+.container .heading{
+    margin-left: 50px;
+    text-align: justify;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.container .heading strong{
+    font-size: 20px;
+    color: #3B577B;
+}
+.container .heading p{
+    font-size: 17px;
+    color: #3B577B;
+}
+.container{
+    animation: about 2s linear;
+}
+
+@keyframes about {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+/* contact section styling */
+.contact{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.contact-form{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-color: #3b577ba4;
+    padding: 24px 30px;
+    border-radius: 20px;
+}
+.contact-form h1{
+    text-align: center;
+    font-family: "Ubuntu" , sans-serif;
+    font-weight: 700;
+    margin: 5px 0;
+    color: white;
+}
+
+input{
+    padding: 12px 15px;
+    width: 320px;
+    height:50px;
+    outline: none;
+    border: none;
+    border-radius:40px;
+    background-color: #3B577B;
+    color: white;
+    margin: 5px 0;
+}
+label{
+    color: white;
+}
+
+.user .fa{
+    position: absolute;
+    left: 15px;
+    top:50px;
+}
+textarea::placeholder,input::placeholder{
+    color: white;
+}
+textarea:focus{
+    color: white;
+}
+textarea{
+    width: 320px;
+    background-color: #3B577B;
+    height: 150px;
+    border-radius:20px;
+    padding: 12px 15px;
+    outline: none;
+    border: none;
+    resize: none;
+    margin: 5px 0;
+    color: white;
+}
+button{
+    background-color: #3B577B;
+    padding: 12px 15px;
+    outline: none;
+    text-align: center;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius:40px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    background-color: #2a3e59;
+}
+.contact{
+    animation: contact 1s linear;
+}
+
+@keyframes contact {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+/* gallery section start */
+ audio{
+     display: none;
+ } 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/hero.png" type="image/x-icon">
+    <title>AB ferdous Portfolio designed by Maruf</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="hero-img"><img src="images/hero.png" alt=""> 
+            <i class="far fa-heart"></i>
+        
+        </div>
+        <nav>
+            <!-- <div class="logo"><a href="#"> <span>A</span>bdul <span>B/span>aten</a></div> -->
+                <div class="logo"><a href="#"> <img id="icon" data-tilt src="images/logo.png" alt=""></a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h1>Hello! <br> I'm Abdul Baten</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Tempora eveniet expedita praesentium
+                    nisi voluptatem.</p>
+                <div class="button"><a href="images/cv.jpg" download="Baten">Download CV</a></div>
+            </div>
+        </div>
+    </header>
+    <audio id="mySong" src="media/audio/bg-m.m4a"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script>
+        var mySong = document.getElementById("mySong")
+        var icon = document.getElementById("icon")
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "images/logo.png"
+            }
+            else{
+                mySong.pause();
+                icon.src = "images/logo.png"
+            }
+        }
+        alert("click the logo");
+    </script>
+</body>
+
+</html>

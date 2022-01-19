@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact section</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/hero.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav>
+        <!-- <div class="logo"><a href="#"> <span>A</span>bdul <span>B/span>aten</a></div> -->
+        <div class="logo"><a href="#"> <img data-tilt src="images/logo.png" alt=""></a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact">
+        <div class="contact-form">
+            <form  onsubmit="sendEmail(); reset(); return false;">
+                <h1>Get It Touch</h1>
+                <div class="user">
+                    <label for="">User</label> <br>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                 <div class="email">
+                    <label for="">Email</label> <br>
+                    <input type="Email" placeholder="Your Email Address" required> 
+                </div>
+                <label for="">Massage</label>
+                <div class="textarea">
+                    <textarea name="" placeholder="Massage..." id="" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit"> Sumbit </button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+          function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "marufabidurrahman76@gmail.com",
+            Password : "787898689012M",
+            To : 'armaruf450@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Email adress",
+            Body : "Email adress password"
+        }).then(
+        message => alert(message)
+        );
+        }
+    </script>
+</body>
+</html>
